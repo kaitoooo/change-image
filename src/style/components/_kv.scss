@@ -1,0 +1,173 @@
+.kv {
+    background-color: rgb(224, 224, 181);
+
+    &__block {
+        overflow: hidden;
+        @include sp {
+            top: 38%;
+        }
+
+        &--inner {
+            text-align: center;
+            margin: get_vw(30) auto 0;
+            @include sp {
+                margin: get_vw_sp(15) auto 0;
+            }
+
+            &-sub {
+                margin: 0;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        @include sp {
+            flex-wrap: wrap;
+        }
+
+        &--title {
+            font-size: get_vw(160);
+            padding: 60px 0 0 190px;
+            line-height: 1.6;
+            font-family: 'Abril Fatface', cursive;
+            transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transform: translateY(100%) skew(10deg);
+            @include sp {
+                font-size: get_vw_sp(30);
+                margin: get_vw_sp(30) auto 0;
+                text-align: center;
+                padding: 0;
+            }
+
+            &.is-active {
+                transform: translateY(0) skew(0);
+                opacity: 1;
+            }
+        }
+        &--sub {
+            font-size: get_vw(40);
+            padding: 0 0 0 190px;
+            line-height: 1.6;
+            font-family: 'Abril Fatface', cursive;
+            transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transform: translateY(100%) skew(10deg);
+            @include sp {
+                font-size: get_vw_sp(20);
+                margin: get_vw_sp(15) auto 0;
+                text-align: center;
+                padding: 0;
+            }
+
+            &.is-active {
+                transform: translateY(0) skew(0);
+                opacity: 1;
+            }
+        }
+        &--link {
+            display: block;
+            width: 300px;
+            margin: 50px auto 0;
+            padding: 15px 0;
+            font-size: get_vw(20);
+            text-decoration: none;
+            overflow: hidden;
+            background-color: #000;
+            border-radius: 30px;
+            color: #fff;
+            text-align: center;
+            font-family: 'Abril Fatface', cursive;
+            opacity: 0;
+            @include sp {
+                width: get_vw_sp(150);
+                margin: get_vw_sp(30) auto 0;
+                padding: get_vw_sp(10) 0;
+                font-size: get_vw_sp(20);
+                border-radius: get_vw_sp(30);
+            }
+
+            &:hover {
+                .kv__inner--link-span {
+                    animation: marquee 2.3s linear infinite;
+                }
+            }
+
+            &-span {
+                position: relative;
+                display: block;
+                transform: translateX(0);
+                z-index: 1;
+                transition: all 0.3s cubic-bezier(0, 0.5, 0.5, 1);
+
+                &::before {
+                    content: attr(data-content);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    color: #fff;
+                    transform: translateX(calc(-100% - 2.1em));
+                    transition: all 0.3s cubic-bezier(0, 0.5, 0.5, 1);
+                    z-index: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+
+        &--left,
+        &--right {
+            width: 50%;
+            position: relative;
+            @include sp {
+                width: 100%;
+            }
+        }
+
+        &--right {
+            height: 100vh;
+        }
+
+        &--item {
+            position: absolute;
+            width: 450px;
+            opacity: 0;
+            @include sp {
+                width: get_vw_sp(230);
+            }
+
+            &-01 {
+                top: 18%;
+                left: 30%;
+                z-index: 3;
+                @include sp {
+                    top: 13%;
+                }
+            }
+
+            &-02 {
+                top: 18%;
+                left: 28%;
+                z-index: 2;
+                transform: rotate(10deg);
+                pointer-events: none;
+                @include sp {
+                    top: 13%;
+                }
+            }
+            &-03 {
+                top: 18%;
+                left: 11%;
+                z-index: 1;
+                transform: rotate(-10deg);
+                pointer-events: none;
+                @include sp {
+                    top: 13%;
+                }
+            }
+        }
+    }
+}

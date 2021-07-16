@@ -1,0 +1,29 @@
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0;
+    width: get_vw(100);
+    height: get_vw(100);
+    background-color: #000;
+    border-radius: 50%;
+    z-index: 100;
+    mix-blend-mode: darken;
+    @include sp {
+        display: none;
+        visibility: hidden;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        width: get_vw(30);
+        height: get_vw(30);
+        border-top: solid 5px #fff;
+        border-right: solid 5px #fff;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+}

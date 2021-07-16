@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo Change Image</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="画像をクリックで変化させるデモサイトです。" />
+        <meta name="keywords" content="," />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta property="og:title" content="Demo Change Image" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Demo Change Image" />
+        <meta property="og:image" content="https://kaito-takase.dev/change-image/ogp.png" />
+        <meta property="og:url" content="https://kaito-takase.dev/change-image" />
+        <meta property="og:description" content="画像をクリックで変化させるデモサイトです。" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="Demo_Change_Image_JP" />
+        <meta name="twitter:title" content="Demo Change Image" />
+        <meta name="twitter:description" content="画像をクリックで変化させるデモサイトです。" />
+        <meta name="twitter:image" content="https://kaito-takase.dev/change-image/ogp.png" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+        <body>
+            <section class="loading" data-loading="parent">
+                <div class="loading__block" data-loading="block">
+                    <p class="loading__block--inner">
+                        <span class="loading__block--text" data-loading="text">Demo Change Image</span>
+                    </p>
+                </div>
+            </section>
+            <section class="kv">
+                <div class="kv__inner">
+                    <div class="kv__inner--left">
+                        <div class="kv__block">
+                            <p class="kv__block--inner">
+                            <h1 class="kv__inner--title" data-kv="title">Hey!<br>
+                                Click it!
+                            </h1>
+                            </p>
+                        </div>
+                        <div class="kv__block">
+                            <div class="kv__block--inner-sub">
+                                <p class="kv__inner--sub" data-kv="sub">
+                                    Click to switch images.<br>
+                                    When you reach the last image,<br>
+                                    you will return to the beginning.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="/" class="kv__inner--link" data-kv="link">
+                            <span class="kv__inner--link-span" data-content="Go Home">Go Home</span>
+                        </a>
+                    </div>
+                    <div class="kv__inner--right" data-kv="area">
+                        <ul class="kv__inner--flex">
+                            <li class="kv__inner--item kv__inner--item-01" data-kv="item01">
+                                <img src="img/img1.jpeg" alt="img" />
+                            </li>
+                            <li class="kv__inner--item kv__inner--item-02" data-kv="item02">
+                                <img src="img/img2.jpeg" alt="img" />
+                            </li>
+                            <li class="kv__inner--item kv__inner--item-03" data-kv="item03">
+                                <img src="img/img3.jpeg" alt="img" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="cursor" data-cursor="target">
+                <div class="cursor__arrow"></div>
+            </div>
+    </body>
+</html>
