@@ -9,7 +9,7 @@
 
         &--inner {
             text-align: center;
-            margin: get_vw(30) auto 0;
+            margin: 0 auto;
             @include sp {
                 margin: get_vw_sp(15) auto 0;
             }
@@ -23,13 +23,14 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         @include sp {
             flex-wrap: wrap;
         }
 
         &--title {
             font-size: get_vw(160);
-            padding: 60px 0 0 190px;
+            padding: get_vw(0) 0 0 get_vw(190);
             line-height: 1.6;
             font-family: 'Abril Fatface', cursive;
             transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -48,7 +49,7 @@
         }
         &--sub {
             font-size: get_vw(40);
-            padding: 0 0 0 190px;
+            padding: 0 0 0 get_vw(190);
             line-height: 1.6;
             font-family: 'Abril Fatface', cursive;
             transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -67,14 +68,14 @@
         }
         &--link {
             display: block;
-            width: 300px;
-            margin: 50px auto 0;
-            padding: 15px 0;
+            width: get_vw(300);
+            margin: get_vw(50) auto 0;
+            padding: get_vw(17) 0;
             font-size: get_vw(20);
             text-decoration: none;
             overflow: hidden;
             background-color: #000;
-            border-radius: 30px;
+            border-radius: get_vw(30);
             color: #fff;
             text-align: center;
             font-family: 'Abril Fatface', cursive;
@@ -133,40 +134,35 @@
 
         &--item {
             position: absolute;
-            width: 450px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: get_vw(500);
+            height: get_vw(680);
             opacity: 0;
             @include sp {
-                width: get_vw_sp(230);
+                width: get_vw_sp(240);
+                height: get_vw_sp(330);
+                top: 13%;
+                margin: 0;
             }
 
             &-01 {
-                top: 18%;
                 left: 30%;
                 z-index: 3;
-                @include sp {
-                    top: 13%;
-                }
             }
 
             &-02 {
-                top: 18%;
                 left: 28%;
                 z-index: 2;
                 transform: rotate(10deg);
                 pointer-events: none;
-                @include sp {
-                    top: 13%;
-                }
             }
             &-03 {
-                top: 18%;
                 left: 11%;
                 z-index: 1;
                 transform: rotate(-10deg);
                 pointer-events: none;
-                @include sp {
-                    top: 13%;
-                }
             }
         }
     }

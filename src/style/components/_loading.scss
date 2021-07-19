@@ -14,7 +14,7 @@
         transform: translate(-50%, -50%);
         overflow: hidden;
         @include sp {
-            top: 38%;
+            top: 41%;
         }
 
         &--inner {
@@ -27,7 +27,7 @@
             color: $color-white;
             transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
             transform: translateY(100%) skew(30deg);
-            font-size: 4.5rem;
+            font-size: get_vw(100);
             @include sp {
                 font-size: get_vw_sp(20);
             }

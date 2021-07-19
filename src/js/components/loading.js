@@ -20,6 +20,7 @@ export default class Loading {
     }
     init() {
         this.start();
+        this.handleEvents();
         gsap.config({
             force3D: true,
         });
